@@ -10,7 +10,7 @@ public class ExtractVariable {
 	String browser;
 	boolean wasInitialized;
 	int resize = 0;
-	
+	//Test for push
 	void simple() {
 		if ( (platform.toUpperCase().indexOf("MAC") > -1) &&
 			     (browser.toUpperCase().indexOf("IE") > -1) &&
