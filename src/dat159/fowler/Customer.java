@@ -20,29 +20,14 @@ public class Customer {
             double thisAmount = 0;
             Rental each = (Rental) rentals.nextElement();
             int daysRented = each.getDaysRented();
-            int priceCode = each.getMovie().getPriceCode();
-
+            MovieType movieType = each.getMovie().getMovieType();
+            
             // determine amount for each line
-            switch (priceCode) {
-                case Movie.REGULAR:
-                    thisAmount += 2;
-                    if (daysRented > 2)
-                        thisAmount += (daysRented - 2) * 1.5;
-                    break;
-                case Movie.NEW_RELEASE:
-                    thisAmount += daysRented * 3;
-                    break;
-                case Movie.CHILDRENS:
-                    thisAmount += 1.5;
-                    if (daysRented > 3)
-                        thisAmount += (daysRented - 3) * 1.5;
-                    break;
-            }
-
+            thisAmount = movieType.getAmountOwed(daysRented);
             // add frequent renter points
             frequentRenterPoints ++;
             // add bonus for a two day new release rental
-            if ((priceCode == Movie.NEW_RELEASE) &&
+            if ((movieType.getClass() == MovieType.NEW_RELEASE.class) &&
             		daysRented > 1) frequentRenterPoints ++;
 
             //show figures for this rental
