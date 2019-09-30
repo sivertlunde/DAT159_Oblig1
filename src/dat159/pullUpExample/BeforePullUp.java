@@ -32,7 +32,7 @@ class Truck extends Vehicle{
 	}
 	
 	
-	/*
+	/* 
 	 * Returning load capacity of the truck
 	 */
 	public String calculateCapacity(int length, int width, int heigth){
@@ -49,5 +49,4 @@ public class BeforePullUp{
 		System.out.println("The truck has a capacity of " + truck.getCapacity());
 		System.out.println("The bus has a capacity of " + bus.getCapacity());
 	}
-	
 }
