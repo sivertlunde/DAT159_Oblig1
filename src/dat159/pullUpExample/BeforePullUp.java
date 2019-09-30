@@ -6,7 +6,6 @@ class Vehicle {
 	public String getCapacity() {
 		return capacity;
 	}
-
 }
 
 class Bus extends Vehicle{
