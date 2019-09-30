@@ -1,4 +1,4 @@
-package dat159.fowler;
+package dat159.pullUpExample;
 
 public class SmallSelfContainedJavaExample {
 
